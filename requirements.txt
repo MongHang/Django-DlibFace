@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+
+# Python 3.10
+# pip install -r requirements.txt
+
+Django~=4.2.4
+opencv-python~=4.8.0.76
+Jinja2~=3.1.2
+numpy~=1.25.2
+
+# dlib~=19.22.99
+# dlib 手動打字
+# pip install https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl
+
+# ================================ 以下舊版(pip list) ================================
+
+# Django~=4.2.3
+# pip~=23.2.1
+# attrs~=23.1.0
+# wheel~=0.38.4
+# Jinja2~=3.1.2
+# setuptools~=65.5.1
+# asgiref~=3.7.2
+# sqlparse~=0.4.4
+# colorama~=0.4.6
+# numpy~=1.25.2
+# requests~=2.31.0
+# MarkupSafe~=2.1.3
+# opencv-python~=4.8.0.76
+
+# dlib~=19.22.99
+# pip install https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp310-win_amd64.whl
+

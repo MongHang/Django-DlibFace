@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文件上傳</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="/upload/">
+        {{ csrf_input }}
+        <input accept="image/*" type="file" name="file" id="fileInput">
+        <button type="submit">上傳文件</button>
+    </form>
+<script>
+</script>
+</body>
+</html>

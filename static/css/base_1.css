@@ -1,0 +1,89 @@
+:root{
+    /* color */
+--light_coffee:#D8C7A0;
+--green:#4d941a;
+--coffee:#59220d;
+--white:#fff;
+--black:#000;
+
+/* 尺寸文字設定 */
+--h1:30px;
+--h2:26px;
+--h3:24px;
+--h4:22px;
+--h5:20px;
+--h6:18px;
+--normal:16px;
+--small:14px;
+--mini:12px;
+
+/* 間距基本值 */
+--spacing1:8px;
+--spacing2:16px;
+--spacing3:24px;
+--spacing4:32px;
+--spacing5:40px;
+--spacing6:56px;
+--spacing7:72px;
+--spacing8:80px;
+--spacing9:96px;
+--spacing10:120px;
+
+--size_normal:10px;
+--size_basic:0.1px;
+
+/* 基本元素設定 */
+html,body{
+    font-family: '微軟正黑體',sans-serif;
+    color: var(--white);
+    height:100%;
+}
+
+a:link,a:active,a:visited{
+    color:var(--coffee);
+    text-decoration:none;
+}
+a:hover{
+    color: var(--black);
+    text-decoration:underline;
+}
+
+/* 常用設定 */
+h1{
+    font-size: var(--h1);
+    font-weight: 700;
+    line-height: calc(var(--size_basic)*25);
+    margin: calc(var(--size_normal)*2) 0;
+}
+h2{
+    font-size: var(--h2);
+    font-weight: 700;
+    line-height: calc(var(--size_basic)*20);
+    text-decoration: uppercase;
+}
+h3{
+    font-size: var(--h3);
+    font-weight: 400;
+    line-height: calc(var(--size_basic)*20);
+    text-decoration: uppercase;
+}
+h4{
+    font-size: var(--h4);
+    font-weight: 400;
+    line-height: calc(var(--size_basic)*20);
+}
+h5{
+    font-size: var(--h5);
+    font-weight:200;
+    line-height: calc(var(--size_basic)*20);
+}
+h6{
+    font-size: var(--h6);
+    font-weight: bolder;
+    line-height: calc(var(--size_basic)*20);
+}
+#gnav,a{
+    font-family: 'Cardo', serif;
+	font-style: italic;
+}
+}

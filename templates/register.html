@@ -1,0 +1,100 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Hi Voyager-註冊</title>
+    <link rel="stylesheet" type="text/css" href="{{static('css/reset.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{static('css/main.css')}}">
+    <script type="text/javascript" src="{{static('js/vue-2.5.16.js')}}"></script>
+    <script type="text/javascript" src="{{static('js/axios.min.js')}}"></script>
+	<!--icon -->
+	<link rel="icon" href="{{static('ico_pot.jpg')}}">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="{{static('css/base_1.css')}}" media="all">
+    <link rel="stylesheet" href="{{static('css/reset_1.css')}}" media="all">
+    <link rel="stylesheet" href="{{static('css/style_1.css')}}" media="all">
+</head>
+<body>
+    <div id="app">
+        <div class="register_con">
+            <div class="l_con fl">
+                <a href="index.html" class="reg_logo"><img src="{{static('images/logo02.png')}}" width="150px" height="56px"></a>
+                <div class="reg_slogan">網站好 · 功能多 · 歡迎光臨</div>
+                <div class="reg_banner"></div>
+            </div>
+
+            <div class="r_con fr">
+                <div class="reg_title clearfix">
+                    <h1>用戶註冊</h1>
+                    <a href='login/'>登入</a>
+                </div>
+                <div class="reg_form clearfix">
+                    <form method="post" class="register_form" @submit="on_submit">
+                        {{csrf_input}}
+                    <ul>
+                        <li>
+                            <label>用戶名稱:</label>
+                            <input type="text" name="username" id="user_name" v-model="username" @blur="check_username">
+                            <span class="error_tip" v-show="error_name">[[error_name_message]]</span>
+                        </li>
+                        <li>
+                            <label>密碼:</label>
+                            <input type="password" name="password" id="pwd" v-model="password" v-on:blur="check_password">
+                            <span class="error_tip" v-show="error_password">[[error_password_message]]</span>
+                        </li>
+                        <li>
+                            <label>確認密碼:</label>
+                            <input type="password" name="password2" id="cpwd" v-model="password2" @blur="check_password2">
+                            <span class="error_tip" v-show="error_password2">[[error_password2_message]]</span>
+                        </li>
+                        <li>
+                            <label>手機號碼:</label>
+                            <input type="text" name="mobile" id="phone" v-model="mobile" @blur="check_mobile">
+                            <span class="error_tip" v-show="error_mobile">[[error_mobile_message]]</span>
+                        </li>
+                        <li class="agreement">
+                            <input type="checkbox" name="allow" id="allow" checked="checked">
+                            <label>同意"優格集團使用者使用協議"</label>
+                            <span class="error_tip" v-show="error_allow">[[error_allow_message]]</span>
+                        </li>
+                        <li class="reg_sub">
+                            <input type="submit" value="註 冊">
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <section class="footer-info">
+                <div class="footer-photo"><a href="index.html"><img src="{{static('ico_pot.png')}}" width="150"></a></div>
+                <h2 class="footer-info-title"></h2>
+                <dl  class="footer-info-list">
+                    <dt>【客服時間】</dt>
+                    <dd>10:00～19:00（不定時公休）</dd>
+                    <dt>【電話號碼】</dt>
+                    <dd>07-123-456</dd>
+                    <dt>【手　　機】</dt>
+                    <dd>0912-345-678</dd>
+                    <dt>【信　　箱】</dt>
+                    <dd>admin@gmail.com</dd>
+                </dl>
+            </section>
+            <ul class="sns">
+                <li><a  href="#"><img src="{{static('img/instagram.png')}}" alt="" width="30px"></a></li>
+                <li><a  href="#"><img src="{{static('img/facebook.png')}}" alt="" width="30px"></a></li>
+                <li><a  href="#"><img src="{{static('img/line.png')}}" alt="" width="30px"></a></li>
+                <li><a  href="#"><img src="{{static('img/wechat.png')}}" alt="" width="30px"></a></li>
+                <!-- <li><a href="#"><img src="img/youtube.png" alt="" width="40px"></a></li> -->
+            </ul>
+            <p class="copyright"><small>Copyrights (c) Hi Voyager Soap All Rights Reserved.</small></p>
+            <p></p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{{static('js/register.js')}}"></script>
+</body>
+</html>

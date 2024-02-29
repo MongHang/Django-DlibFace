@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1,minimum-scale=1,maximum-scale=2.0">
+<meta name="format-detection" content="telephone=no">
+<title>Hi! voyager</title>
+<!--icon -->
+<link rel="icon" href="ico_pot.jpg">
+<!-- Fonts -->
+<!-- stylesheets -->
+<link rel="stylesheet" href="{{static('css/base_1.css')}}" media="all">
+<link rel="stylesheet" href="{{static('css/reset_1.css')}}" media="all">
+<link rel="stylesheet" href="{{static('css/style_1.css')}}" media="all">
+
+<!-- google網路字形 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" >
+<!-- google線上圖標 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+<header id="header">
+    <div class="div_top_logo">
+        <div class="top_logo"><span>Hi Voyager</span><a href="index.html"></a></div>
+    </div>
+    <div class="clear"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><b>首頁</b></a></li>
+            <li class="item-childen"><a href="products.html"><b>產品</b></a>
+<!--                <ul class="sub_menu">-->
+<!--                    <li><a href="dry.html"><span><b>清潔力溫和</b></span></a></li>-->
+<!--                    <li><a href="normal.html"><span><b>清潔力適中</b></span></a></li>-->
+<!--                    <li><a href="oily.html"><span><b>清潔力稍強</b></span></a></li>-->
+<!--                </ul>-->
+            </li>
+            <li><a href="introduce.html"><b>介紹</b></a>
+<!--                <ul class="sub_menu">-->
+<!--                    <li><a href="benefit.html"><span><b>手工皂的好處</b></span></a></li>-->
+<!--                    <li><a href="material.html"><span><b>材料介紹</b></span></a></li>-->
+<!--                    <li><a href="suitable.html"><span><b>適合哪種皂</b></span></a></li>-->
+<!--                </ul>-->
+            </li>
+            <li><a href="contact.html"><b>聯絡我們</b></a></li>
+            <li><a href="register/"><b>註冊</b></a></li>
+<!--            <li><a href="cart.html"><span class="material-symbols-outlined" id="cart">shopping_cart</span><b>購物車</b></a></li>-->
+        </ul>
+    </nav><!-- /#nav -->
+</header><!-- /#header -->
+
+<main id="main">
+
+    <div id="intro">
+        <h2>Upload Successful</h2>
+        <p>Your file was uploaded successfully.</p>
+        {% if document.uploadedFile %}
+            <a href="{{ document.uploadedFile.url }}" Download=""><button>Download</button></a>
+            <img src="{{ document.uploadedFile.url }}" alt="Uploaded File" width=80% style="display:block; margin:auto;">
+        {% else %}
+            <p>No file uploaded</p>
+        {% endif %}
+    </div>
+
+    <section id="info">
+        <h2 class="heading">Information<a href="information_more.html" class="more">more</a></h2>
+        <dl class="info-list">
+            <dt>步驟一</dt>
+            <dd>註冊帳號</a></dd>
+            <dt>步驟二</dt>
+            <dd>登入帳號</a></dd>
+            <dt>步驟三</dt>
+            <dd>上傳一張自己的帥臉</a></dd>
+            <dt>步驟四</dt>
+            <dd>可以把生成的圖片下載了</a></dd>
+</section><!-- /#info -->
+<section id="staff">
+    <div class="staff-photo"><img src="{{static('img/face_2_dw9YJtz.jpg')}}" alt="" width="140"></div>
+    <div class="staff-msg">
+        <h2 class="staff-heading">工作人員的一句話</h2>
+        <p>為您精心打造出美好的換臉體驗。</p>
+    </div>
+</section>
+<aside class="banner">
+        <ul class ="banner-list">
+            <li><a href="https://alonevoyager.com"  target="_blank"></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+</aside><!-- /#banner -->
+</main><!-- /#main -->
+
+<footer id="footer">
+    <div class="container">
+        <section class="footer-info">
+            <div class="footer-photo"><a href="index.html"><img src="{{static('ico_pot.png')}}" width="150"></a></div>
+            <h2 class="footer-info-title"></h2>
+            <dl  class="footer-info-list">
+                <dt>【客服時間】</dt>
+                <dd>10:00～19:00（不定時公休）</dd>
+                <dt>【電話號碼】</dt>
+                <dd>07-123-456</dd>
+                <dt>【手　　機】</dt>
+                <dd>0912-345-678</dd>
+                <dt>【信　　箱】</dt>
+                <dd>admin@gmail.com</dd>
+            </dl>
+        </section>
+        <ul class="sns">
+            <li><a  href="#"><img src="{{static('img/instagram.png')}}" alt="" width="30px"></a></li>
+            <li><a  href="#"><img src="{{static('img/facebook.png')}}" alt="" width="30px"></a></li>
+            <li><a  href="#"><img src="{{static('img/line.png')}}" alt="" width="30px"></a></li>
+            <li><a  href="#"><img src="{{static('img/wechat.png')}}" alt="" width="30px"></a></li>
+            <!-- <li><a href="#"><img src="img/youtube.png" alt="" width="40px"></a></li> -->
+        </ul>
+        <p class="copyright"><small>Copyrights (c) Hi Voyager Soap All Rights Reserved.</small></p>
+        <p></p>
+    </div>
+</footer>
+</body>
+</html>
